@@ -1,0 +1,93 @@
+//
+//  NavigateThenSheetThenPopover.swift
+//  ModernNavDemo
+//
+//  Created by Shayan Ali on 07.01.23.
+//
+
+import SwiftUI
+
+enum NavigateThenSheetThenPopover {
+	class Model: ObservableObject {
+		@Published var child: ChildModel?
+		
+		init(child: ChildModel? = nil) {
+			self.child = child
+		}
+	}
+	
+	class ChildModel: ObservableObject {
+		@Published var sheetModel: SheetModel?
+		init(sheetModel: SheetModel? = nil) {
+			self.sheetModel = sheetModel
+		}
+	}
+	
+	class SheetModel: Identifiable, ObservableObject {
+		@Published var popoverValue: Int?
+		init(popoverValue: Int? = nil) {
+			self.popoverValue = popoverValue
+		}
+		var id: ObjectIdentifier {
+			ObjectIdentifier(self)
+		}
+	}
+	
+	struct ContentView: View {
+		@ObservedObject var model: Model
+		
+		var body: some View {
+			NavigationLink(
+				"Navigate to Child Screen",
+				isActive: Binding(
+					get: { self.model.child != nil },
+					set: { isActive in
+						self.model.child = isActive ? ChildModel() : nil
+					}
+				)
+			) {
+				if let child = self.model.child {
+					ChildView(child: child)
+				}
+			}
+		}
+	}
+	
+	struct ChildView: View {
+		@ObservedObject var child: ChildModel
+		
+		var body: some View {
+			Button("Show sheet") {
+				self.child.sheetModel = SheetModel()
+			}
+			.sheet(item: self.$child.sheetModel) { sheetModel in
+				SheetView(model: sheetModel)
+			}
+		}
+	}
+	
+	struct SheetView: View {
+		@ObservedObject var model: SheetModel
+		
+		var body: some View {
+			Button("Show popover") {
+				self.model.popoverValue = .random(in: 1...100)
+			}
+			.popover(item: self.$model.popoverValue) { value in
+				PopoverView(count: value)
+					.frame(width: 200, height: 300)
+			}
+		}
+	}
+	
+	struct PopoverView: View {
+		@State var count: Int
+		var body: some View {
+			HStack {
+				Button("-") { self.count -= 1 }
+				Text("\(self.count)")
+				Button("+") { self.count += 1 }
+			}
+		}
+	}
+}
