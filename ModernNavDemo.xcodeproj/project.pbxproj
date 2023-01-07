@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B4388CD52969624A00451CB9 /* URLRouting in Frameworks */ = {isa = PBXBuildFile; productRef = B4388CD42969624A00451CB9 /* URLRouting */; };
 		B4450AFA2968B41300523F6D /* NavigateThenSheetThenPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4450AF92968B41300523F6D /* NavigateThenSheetThenPopover.swift */; };
 		B4450AFC2968BD4700523F6D /* NestedNavigationDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4450AFB2968BD4700523F6D /* NestedNavigationDemo.swift */; };
 		B4450AFE2968C07A00523F6D /* NavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4450AFD2968C07A00523F6D /* NavigationStack.swift */; };
-		B4450B012968C24800523F6D /* URLRouting in Frameworks */ = {isa = PBXBuildFile; productRef = B4450B002968C24800523F6D /* URLRouting */; };
 		B4467FA429676BA10050FCA8 /* ModernNavApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4467FA329676BA10050FCA8 /* ModernNavApp.swift */; };
 		B4467FA829676BA20050FCA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4467FA729676BA20050FCA8 /* Assets.xcassets */; };
 		B4467FAB29676BA20050FCA8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4467FAA29676BA20050FCA8 /* Preview Assets.xcassets */; };
 		B4467FB229676BDD0050FCA8 /* SheetViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4467FB129676BDD0050FCA8 /* SheetViewDemo.swift */; };
+		B4DBF6722968D6A00010F09F /* NavigationDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DBF6712968D6A00010F09F /* NavigationDemo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B4467FA729676BA20050FCA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4467FAA29676BA20050FCA8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B4467FB129676BDD0050FCA8 /* SheetViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewDemo.swift; sourceTree = "<group>"; };
+		B4DBF6712968D6A00010F09F /* NavigationDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDemo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,7 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4450B012968C24800523F6D /* URLRouting in Frameworks */,
+				B4388CD52969624A00451CB9 /* URLRouting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +65,7 @@
 				B4467FB129676BDD0050FCA8 /* SheetViewDemo.swift */,
 				B4450AF92968B41300523F6D /* NavigateThenSheetThenPopover.swift */,
 				B4450AFB2968BD4700523F6D /* NestedNavigationDemo.swift */,
+				B4DBF6712968D6A00010F09F /* NavigationDemo.swift */,
 				B4450AFD2968C07A00523F6D /* NavigationStack.swift */,
 				B4467FA729676BA20050FCA8 /* Assets.xcassets */,
 				B4467FA929676BA20050FCA8 /* Preview Content */,
@@ -95,7 +98,7 @@
 			);
 			name = ModernNavDemo;
 			packageProductDependencies = (
-				B4450B002968C24800523F6D /* URLRouting */,
+				B4388CD42969624A00451CB9 /* URLRouting */,
 			);
 			productName = ModernNavDemo;
 			productReference = B4467FA029676BA10050FCA8 /* ModernNavDemo.app */;
@@ -126,7 +129,7 @@
 			);
 			mainGroup = B4467F9729676BA10050FCA8;
 			packageReferences = (
-				B4450AFF2968C24800523F6D /* XCRemoteSwiftPackageReference "swift-url-routing" */,
+				B4388CD32969624A00451CB9 /* XCRemoteSwiftPackageReference "swift-url-routing" */,
 			);
 			productRefGroup = B4467FA129676BA10050FCA8 /* Products */;
 			projectDirPath = "";
@@ -158,6 +161,7 @@
 				B4450AFC2968BD4700523F6D /* NestedNavigationDemo.swift in Sources */,
 				B4467FB229676BDD0050FCA8 /* SheetViewDemo.swift in Sources */,
 				B4450AFA2968B41300523F6D /* NavigateThenSheetThenPopover.swift in Sources */,
+				B4DBF6722968D6A00010F09F /* NavigationDemo.swift in Sources */,
 				B4467FA429676BA10050FCA8 /* ModernNavApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,7 +365,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B4450AFF2968C24800523F6D /* XCRemoteSwiftPackageReference "swift-url-routing" */ = {
+		B4388CD32969624A00451CB9 /* XCRemoteSwiftPackageReference "swift-url-routing" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-url-routing";
 			requirement = {
@@ -372,9 +376,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B4450B002968C24800523F6D /* URLRouting */ = {
+		B4388CD42969624A00451CB9 /* URLRouting */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B4450AFF2968C24800523F6D /* XCRemoteSwiftPackageReference "swift-url-routing" */;
+			package = B4388CD32969624A00451CB9 /* XCRemoteSwiftPackageReference "swift-url-routing" */;
 			productName = URLRouting;
 		};
 /* End XCSwiftPackageProductDependency section */

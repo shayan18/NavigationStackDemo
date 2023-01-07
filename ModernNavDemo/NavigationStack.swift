@@ -54,7 +54,7 @@ enum NavigationStackDemo {
 						ScreenC(model: .init(sheet: .init(popoverValue: value)))
 					}
 				}
-				.navigationTitle("Root")
+				.navigationTitle("Main View")
 			}
 			.onOpenURL { url in
 				do {
@@ -147,7 +147,7 @@ enum NavigationStackDemo {
 
 		var body: some View {
 			Button("Show popover") {
-				self.model.popoverValue = .random(in: 1...1_000)
+				self.model.popoverValue = .random(in: 1...100)
 			}
 			.popover(item: self.$model.popoverValue) { value in
 				PopoverView(count: value)
@@ -184,7 +184,7 @@ extension NavigationStackDemo {
 		var body: some ParserPrinter<URLRequestData, Destination> {
 			OneOf {
 				// /screenA
-				Parse(.case(Destination.screenA)) {
+				Parse(. case(Destination.screenA)) {
 					Path { "screenA" }
 				}
 				// /screenB

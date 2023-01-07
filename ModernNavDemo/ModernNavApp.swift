@@ -12,12 +12,9 @@ struct ModernNavApp: App {
 	var body: some Scene {
 		WindowGroup {
 			
-			// uncomment me: 😒
-			/*
 			SheetViewDemo.ContentView(
 				model: .init(sheet: .init(popoverValue: 50))
 			)
-			 */
 			
 		// uncomment me too: 🤩
 			
@@ -39,9 +36,15 @@ struct ModernNavApp: App {
 			.navigationViewStyle(.stack)
 			 */
 			
-			NavigationStackDemo.ContentView(
-				model: .init()
-			)
+			
+			
+//			NavigationStackDemo.ContentView(
+//				model: .init()
+//			)
+			
+			
+			
+			//	NavigationPathView()
 		}
 	}
 }
