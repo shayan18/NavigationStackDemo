@@ -13,6 +13,7 @@ enum NavigationStackDemo {
 		case screenB
 		case screenC(destination: ScreenCDestination? = nil)
 	}
+
 	enum ScreenCDestination: Hashable {
 		case sheet(popoverValue: Int? = nil)
 	}

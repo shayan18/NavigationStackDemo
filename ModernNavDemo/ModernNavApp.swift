@@ -13,10 +13,10 @@ struct ModernNavApp: App {
 		WindowGroup {
 			
 			SheetViewDemo.ContentView(
-				model: .init(sheet: .init(popoverValue: 50))
+				model: .init()
 			)
 			
-		// uncomment me too: 🤩
+		// uncomment me: 🤩
 			
 		/*
 			NavigationView {
